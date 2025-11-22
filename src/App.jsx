@@ -18,7 +18,7 @@ function App() {
     fetchCharacters();
   }, []);
 
-  // Вспомогательная функция для извлечения номера эпизода из URL
+  
   const getEpisodeNumber = (episodeUrl) => {
     const match = episodeUrl.match(/\/episode\/(\d+)$/);
     return match ? `Episode ${match[1]}` : 'Unknown';
@@ -38,7 +38,7 @@ function App() {
                 alt={character.name} 
                 className="character-image"
                 onError={(e) => {
-                  e.target.src = 'https://rickandmortyapi.com/api/character/avatar/18.jpeg'; // fallback
+                  e.target.src = 'https://rickandmortyapi.com/api/character/avatar/18.jpeg'; 
                 }}
               />
               <div className="character-info">
